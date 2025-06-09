@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,17 +8,42 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""/>
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
-    <link rel="stylesheet" href="estilos.css">
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
 
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div id="map"></div>
-    <script src="programa.js"></script>
+
+<div id="map" style="height: 400px;"></div>  
+<script src="programa.js"></script>
+
+<!-- Formulario -->
+<div class="container mt-5">
+    <form action="" class="p-4 border rounded shadow-sm">
+        <h2>Registrar Sitio</h2>
+
+        <div class="mb-3">
+            <label for="GET-name" class="form-label">Nombre:</label>
+            <input id="GET-name" type="text" name="name" class="form-control" placeholder="Ingresa el nombre del sitio" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="GET-date" class="form-label">Fecha:</label>
+            <input id="GET-date" type="date" name="event-date" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="GET-description" class="form-label">Descripción:</label>
+            <textarea id="GET-description" name="description" class="form-control" placeholder="Describe el sitio" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
 
 </body>
 </html>
